@@ -16,11 +16,13 @@ def solve(operation):
         v1 = int(operation[0])
     except ValueError:
         v1 = int(solve(wires[operation[0]]))
+        wires[operation[0]] = (v1, 'SIG', None)
     if operation[2] is not None:
         try:
             v2 = int(operation[2])
         except ValueError:
             v2 = int(solve(wires[operation[2]]))
+            wires[operation[2]] = (v2, 'SIG', None)
     return funcs[operation[1]](v1, v2)
 
 
