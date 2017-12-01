@@ -5,5 +5,3 @@ with open('2017/Day1/input.txt', 'r') as f:
         total = total + int(l[-1]) if int(l[-1]) == int(l[0]) else total
         print total
         
-
-            
