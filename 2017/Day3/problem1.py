@@ -6,9 +6,9 @@ def get_angle_from_index(i, r):
 
     This function only works for `r >= 2`.
 
-    Angle (`θ`) is calculated by the following function where `s = r - 1` (The ring indices are rotated by -1):
+    Angle (`θ`) is calculated by the following function:
     ```
-    θ = ((-1)^(i/r))(s + (2⌈i/2r⌉)r) - ((-1)^(i/r))i
+    θ = (-1)^(i/r)(r + (2⌈i/(2r)⌉)r - i - 1)
     ```
 
     This is the function for the graph that looks like this:
@@ -17,7 +17,7 @@ def get_angle_from_index(i, r):
        max θ |    /\    /\    /\    /
     θ        |\  /  \  /  \  /  \  /
            0 |_\/____\/____\/____\/__
-         i = 0  s   s+2r  s+4r  s+6r
+         i = 0 r-1  3r-1  5r-1  7r-1
     ```
     The graph is translated in order to account for the rings' 0-th position being one up from the bottom right corner.
 
@@ -41,8 +41,7 @@ def get_angle_from_index(i, r):
     if i == 0:
         i = i + 8 * r # Translate by 1 rotation to avoid divide by zero
 
-    s = r - 1
-    return int(((-1)**(i / r)) * (s + ((2 * ceil(i / (2 * r))) * r)) - (((-1)**(i / r)) * i))
+    return int((-1)**(i / r) * (r + ((2 * ceil(i / (2 * r))) * r) - i - 1))
 
 def manhattan_distance(input):
     curr_start = 1
