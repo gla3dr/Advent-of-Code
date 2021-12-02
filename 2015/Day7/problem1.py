@@ -44,4 +44,4 @@ with open('input.txt') as input:
             operand2 = parts[2]
             operator = parts[1]
         wires[result] = (operand1, operator, operand2)
-print solve(wires['a'])
+print(solve(wires['a']))

@@ -41,7 +41,7 @@ def get_angle_from_index(i, r):
     if i == 0:
         i = i + 8 * r # Translate by 1 rotation to avoid divide by zero
 
-    return int((-1)**(i / r) * (r + ((2 * ceil(i / (2 * r))) * r) - i - 1))
+    return int((-1)**(i // r) * (r + ((2 * ceil(i // (2 * r))) * r) - i - 1))
 
 def manhattan_distance(input):
     curr_start = 1
@@ -58,4 +58,4 @@ def manhattan_distance(input):
     return theta + radius
 
 if __name__ == "__main__":
-    print manhattan_distance(325489)
+    print(manhattan_distance(325489))

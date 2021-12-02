@@ -29,4 +29,4 @@ with open('input.txt') as input:
             
             isSanta = not isSanta
         
-        print delivered
+        print(delivered)

@@ -8,4 +8,4 @@ with open('2017/Day5/input.txt', 'r') as f:
         pc += inst
         instructions[temp] += 1
         steps += 1
-    print steps
+    print(steps)

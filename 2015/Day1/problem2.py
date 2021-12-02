@@ -9,5 +9,5 @@ with open('aoc1in.txt') as f:
 			elif c == ')':
 				floor -= 1
 			if floor < 0:
-				print index
+				print(index)
 				exit()

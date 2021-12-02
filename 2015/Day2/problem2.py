@@ -1,3 +1,4 @@
+from functools import reduce
 with open('input.txt', 'r') as f:
     total = 0
     for line in f:
@@ -8,4 +9,4 @@ with open('input.txt', 'r') as f:
       med = min(dims)
       ribbon = 2*small + 2*med
       total += ribbon + bow
-    print total
+    print(total)

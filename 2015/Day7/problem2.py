@@ -45,5 +45,4 @@ with open('input.txt') as input:
             operator = parts[1]
         wires[result] = (operand1, operator, operand2)
 wires['b'] = ('46065', 'SIG', None)
-print solve(wires['a'])
-
+print(solve(wires['a']))

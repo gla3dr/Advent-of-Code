@@ -6,4 +6,4 @@ with open('aoc1in.txt') as f:
 				floor += 1
 			elif c == ')':
 				floor -= 1
-	print floor
+	print(floor)

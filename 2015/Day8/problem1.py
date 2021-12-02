@@ -5,4 +5,4 @@ with open('input.txt') as input:
         literals += len(line)
         escaped = line[1:-1].decode('string_escape')
         escapes += len(escaped)
-print literals - escapes
+print(literals - escapes)

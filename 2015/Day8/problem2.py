@@ -7,4 +7,4 @@ with open('input.txt') as input:
         literals += len(line)
         encoded = json.dumps(line)
         encodes += len(encoded)
-print encodes - literals
+print(encodes - literals)

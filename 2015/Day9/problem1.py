@@ -31,12 +31,12 @@ with open('test_input.txt') as graph:
         if parts[2] not in parents:
             parents[parts[2]] = parts[2]
 edges.sort(key=lambda tup: tup[2])
-print edges
+print(edges)
 for edge in edges:
     if parents[edge[0]] != parents[edge[1]]:
-        print "Add edge: {}".format(edge)
+        print("Add edge: {}".format(edge))
         mst.append(edge)
         union(edge)
-        print "Sets: {}".format(sets)
-        print "Parents: {}\n".format(parents)
-print sum([e[2] for e in mst])
+        print("Sets: {}".format(sets))
+        print("Parents: {}\n".format(parents))
+print(sum([e[2] for e in mst]))

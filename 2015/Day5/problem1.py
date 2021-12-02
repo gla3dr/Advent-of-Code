@@ -9,4 +9,4 @@ with open('input.txt') as input:
             if sum(letter in vowels for letter in word) >= 3:
                 if dubs.match(word):
                     nice += 1
-    print nice
+    print(nice)

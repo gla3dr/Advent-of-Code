@@ -1,4 +1,4 @@
-lights = [[0 for x in xrange(1000)] for y in xrange(1000)]
+lights = [[0 for x in range(1000)] for y in range(1000)]
 with open('input.txt') as input:
     for inst in input:
         parts = inst.split()
@@ -17,4 +17,4 @@ with open('input.txt') as input:
             for x in range(int(start[0]), int(end[0])+1):
                 for y in range(int(start[1]), int(end[1])+1):
                     lights[x][y] += 2
-    print sum(map(sum, lights))
+    print(sum(map(sum, lights)))

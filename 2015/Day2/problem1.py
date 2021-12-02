@@ -9,5 +9,5 @@ with open('input.txt', 'r') as f:
       small = min(sides)
       total += (2*sides[0]) + (2*sides[1]) + (2*sides[2]) + small
     
-    print total
+    print(total)
       

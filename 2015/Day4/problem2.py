@@ -9,4 +9,4 @@ while True:
     if hash.startswith('000000'):
         break
     index += 1
-print index
+print(index)

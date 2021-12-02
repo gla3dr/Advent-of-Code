@@ -20,4 +20,4 @@ with open('input.txt') as input:
                         lights.remove((x,y))
                     else:
                         lights.add((x,y))
-    print len(lights)
+    print(len(lights))

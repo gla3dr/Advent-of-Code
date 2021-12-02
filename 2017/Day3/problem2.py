@@ -2,7 +2,7 @@ def get_next_ring(prev_ring):
     prev_ring_index = len(prev_ring) - 1
     next_ring_len = len(prev_ring) + 8
     next_ring = []
-    for i in xrange(next_ring_len):
+    for i in range(next_ring_len):
         if i == 0:
             next_ring.append(prev_ring[prev_ring_index] + prev_ring[0])
             prev_ring_index = 0
@@ -34,4 +34,4 @@ def first_number_larger_than(input):
     return next(n for n in spiral_generator() if n > input)
 
 if __name__ == "__main__":
-    print first_number_larger_than(325489)
+    print(first_number_larger_than(325489))

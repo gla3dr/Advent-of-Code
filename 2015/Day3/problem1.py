@@ -19,4 +19,4 @@ with open('input.txt') as input:
                 delivered += 1
                 houses.append(coords)
         
-        print delivered
+        print(delivered)
